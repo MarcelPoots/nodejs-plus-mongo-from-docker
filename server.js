@@ -51,7 +51,8 @@ app.get('/posts', (req, resp) => {
 // Creating one
 app.post('/user', async (req, res) => {
     const user = new User({
-      name: req.body.name
+      name: req.body.name,
+      age: req.body.age
     })
     try {
       const savedUser = await user.save()
